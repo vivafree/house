@@ -32,17 +32,7 @@ function prevSlide(section) {
     showSlides(section);
 }
 
-function showSection(sectionId) {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.style.display = 'none';
-    });
-    document.getElementById(sectionId).style.display = 'block';
-}
-
-// Initialize to show the exterior section by default
 document.addEventListener('DOMContentLoaded', () => {
-    showSection('exterior');
     showSlides('exterior');
     showSlides('interior');
 });
