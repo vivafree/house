@@ -1,26 +1,35 @@
-let slideIndex = 0;
-showSlides(slideIndex);
+let slideIndexes = {
+    exterior: 0,
+    interior: 0
+};
 
-function showSlides(index) {
-    const slides = document.getElementsByClassName('slide');
-    if (index >= slides.length) {
+function showSlides(section) {
+    const slides = document.querySelectorAll(`.${section}-slides .slide`);
+    let slideIndex = slideIndexes[section];
+    
+    if (slideIndex >= slides.length) {
+        slideIndexes[section] = 0;
         slideIndex = 0;
     }
-    if (index < 0) {
+    if (slideIndex < 0) {
+        slideIndexes[section] = slides.length - 1;
         slideIndex = slides.length - 1;
     }
+    
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none';
     }
     slides[slideIndex].style.display = 'block';
 }
 
-function nextSlide() {
-    showSlides(++slideIndex);
+function nextSlide(section) {
+    slideIndexes[section]++;
+    showSlides(section);
 }
 
-function prevSlide() {
-    showSlides(--slideIndex);
+function prevSlide(section) {
+    slideIndexes[section]--;
+    showSlides(section);
 }
 
 function showSection(sectionId) {
@@ -32,4 +41,8 @@ function showSection(sectionId) {
 }
 
 // Initialize to show the exterior section by default
-showSection('exterior');
+document.addEventListener('DOMContentLoaded', () => {
+    showSection('exterior');
+    showSlides('exterior');
+    showSlides('interior');
+});

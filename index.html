@@ -22,8 +22,8 @@
     <section id="exterior">
         <h2>외부</h2>
         <div class="slider">
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <div class="slides">
+            <button class="prev" onclick="prevSlide('exterior')">&#10094;</button>
+            <div class="slides exterior-slides">
                 <div class="slide active">
                     <img src="exterior1.jpg" alt="외부 이미지 1">
                 </div>
@@ -34,14 +34,14 @@
                     <img src="exterior3.jpg" alt="외부 이미지 3">
                 </div>
             </div>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <button class="next" onclick="nextSlide('exterior')">&#10095;</button>
         </div>
     </section>
     <section id="interior">
         <h2>내부</h2>
         <div class="slider">
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <div class="slides">
+            <button class="prev" onclick="prevSlide('interior')">&#10094;</button>
+            <div class="slides interior-slides">
                 <div class="slide active">
                     <img src="interior1.jpg" alt="내부 이미지 1">
                 </div>
@@ -52,7 +52,7 @@
                     <img src="interior3.jpg" alt="내부 이미지 3">
                 </div>
             </div>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <button class="next" onclick="nextSlide('interior')">&#10095;</button>
         </div>
     </section>
     <script src="scripts.js"></script>
