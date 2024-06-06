@@ -2,7 +2,7 @@ let slideIndex = 0;
 showSlides(slideIndex);
 
 function showSlides(index) {
-    let slides = document.getElementsByClassName('slide');
+    const slides = document.getElementsByClassName('slide');
     if (index >= slides.length) {
         slideIndex = 0;
     }

@@ -61,6 +61,7 @@ section {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
+    height: 90vh; /* Viewport height set to 90% */
 }
 
 .slides {
@@ -71,6 +72,8 @@ section {
 .slide {
     min-width: 100%;
     display: none;
+    height: 90vh; /* Viewport height set to 90% */
+    object-fit: contain; /* Ensure image fits within the container */
 }
 
 .slide.active {
