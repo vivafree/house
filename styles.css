@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
@@ -54,7 +55,7 @@ nav ul li a:hover {
 
 section {
     padding: 1rem;
-    height: calc(90vh - 100px); /* Adjust height to fit the screen while considering header/nav */
+    min-height: 90vh; /* Ensure sections take up at least 90% of the viewport height */
 }
 
 .slider {
@@ -62,7 +63,7 @@ section {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    height: 100%;
+    height: calc(100% - 2rem); /* Adjust height to fit within section while considering padding */
 }
 
 .slides {
