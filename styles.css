@@ -54,6 +54,7 @@ nav ul li a:hover {
 
 section {
     padding: 1rem;
+    height: calc(90vh - 100px); /* Adjust height to fit the screen while considering header/nav */
 }
 
 .slider {
@@ -61,7 +62,7 @@ section {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    height: calc(90vh - 150px); /* 90% of viewport height minus estimated header and nav height */
+    height: 100%;
 }
 
 .slides {
