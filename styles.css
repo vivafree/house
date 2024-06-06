@@ -60,16 +60,16 @@ section {
     position: relative;
     max-width: 100%;
     margin: auto;
+    overflow: hidden;
 }
 
 .slides {
     display: flex;
-    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
     min-width: 100%;
-    transition: transform 0.5s ease-in-out;
     display: none;
 }
 
