@@ -61,8 +61,7 @@ section {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
+    height: calc(90vh - 150px); /* 90% of viewport height minus estimated header and nav height */
 }
 
 .slides {
