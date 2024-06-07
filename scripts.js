@@ -17,9 +17,9 @@ function showSlides(section) {
     }
     
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
+        slides[i].classList.remove('active');
     }
-    slides[slideIndex].style.display = 'block';
+    slides[slideIndex].classList.add('active');
 }
 
 function nextSlide(section) {
